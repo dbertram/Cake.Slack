@@ -28,7 +28,7 @@ namespace Cake.Slack.Chat
             }
 
             SlackChatMessageResult result;
-            
+
             if (!string.IsNullOrWhiteSpace(messageSettings.IncomingWebHookUrl))
             {
                 result = PostToIncomingWebHook(

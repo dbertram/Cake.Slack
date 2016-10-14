@@ -36,6 +36,14 @@ namespace Cake.Slack.Chat
         public Uri IconUrl { get; set; }
 
         /// <summary>
+        /// Emoji to use as the icon for this message
+        /// </summary>
+        /// <value>
+        /// The image_url.
+        /// </value>
+        public string IconEmoji { get; set; }
+
+        /// <summary>
         /// Optional flag for if should throw exception on failure
         /// </summary>
         public bool? ThrowOnFail { get; set; }

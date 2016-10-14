@@ -129,6 +129,11 @@ namespace Cake.Slack.Chat
                 throw new NullReferenceException("Invalid IncomingWebHookUrl supplied.");
             }
 
+            if (messageSettings.IconUrl != null && messageSettings.IconEmoji != null)
+            {
+                throw new InvalidOperationException("Can only specify one of IconUrl or IconEmoji");
+            }
+
             if (messageAttachments == null)
             {
                 throw new ArgumentNullException(nameof(messageAttachments), "Invalid attachment supplied");
